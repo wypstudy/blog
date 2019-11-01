@@ -3,10 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: WYP's Blog
-subtitle: 韦一平的博客
-description: Everybody says the same things to you.
+title: 韦一平的博客
+subtitle: wyp's blog
+description: 各种计算机相关的玩意以及日记
 keywords:
+  - wyp
 author: 韦一平
 language: zh-Hans
 timezone: Asia/Shanghai
@@ -17,6 +18,8 @@ url: http://wypstudy.github.io
 root: /
 permalink: :year-:month-:day-:title.html
 permalink_defaults:
+pretty_urls:
+  trailing_index:false
 
 # Directory
 source_dir: source
