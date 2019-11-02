@@ -22,10 +22,10 @@ theme_color:
 # Main menu navigation
 # ---------------
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
+  主页: /
+  归档: /archives
+  标签: /tags
+  分类: /categories
   #XXX: /xxx
 
 # Favicon
@@ -57,7 +57,9 @@ highlight_theme: darker
 # Nav settings
 # ---------------
 social:
-  github: https://github.com/wypstudy
+  github fab: https://github.com/wypstudy
+  steam fab: https://steamcommunity.com/id/banhallow1993
+  envelope fas: mailto:1140664142@qq.com
 
 # Algolia search
 # ---------------
@@ -113,6 +115,7 @@ scripts:
 cdn:
   css:
     fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
+    fontawesomev5: https://use.fontawesome.com/releases/v5.7.2/css/all.css
   js:
     anime: /js/third-party/anime.min.js
     jquery: /js/third-party/jquery.min.js
