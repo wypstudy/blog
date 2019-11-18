@@ -21,7 +21,7 @@ tags:
 
 #### 1.1.1 场景一
 
-`Maven` 或 `SBT` 没有自动把 `spark-sql-kafka` jar 里的 `META-INF` 文件夹放进 jar 里,但是那个文件很重要
+`Maven` 或 `SBT` 没有自动把 `spark-sql-kafka` 包里的 `META-INF` 文件夹放进包里,但是那个文件很重要
 
 ### 1.2 解决方案
 
@@ -66,4 +66,23 @@ spark-submit \
 </plugin>
 ```
 
+## 2.`java.io.FileNotFoundException: File does not exist: hdfs://xxx/user/root/.sparkStaging/application_xxx/xxx.jar`
 
+### 2.1 触发场景和原因
+
+#### 2.1.1 场景一
+
+`HDP`从2.x升级到3.x后,`yarn cluster`运行模式下,在`spark-submit`时候指定程序包为本地`jar`文件并不会像之前那样自动放入`HDFS`中让所有`worker`都能读到
+
+### 2.2 解决方案
+
+#### 2.2.1 方案一
+
+手动把`jar`文件放入`HDFS`中,然后提交任务时,指定`HDFS`路径,例如
+```bash
+spark-submit \
+    --class com.mygroup.myclass \
+    --master yarn  \
+    --deploy-mode cluster \
+    hdfs://slave1:8020/xxxx.jar
+```
