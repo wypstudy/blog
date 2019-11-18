@@ -15,7 +15,7 @@ tags:
 
 # 问题列表
 
-## 1.`Caused by: java.lang.ClassNotFoundException: kafka.DefaultSource`
+## 1.`java.lang.ClassNotFoundException: kafka.DefaultSource`
 
 ### 1.1 触发场景和原因
 
@@ -80,6 +80,7 @@ spark-submit \
 
 手动把`jar`文件放入`HDFS`中,然后提交任务时,指定`HDFS`路径,例如
 ```bash
+hdfs dfs -put xxxx.jar /
 spark-submit \
     --class com.mygroup.myclass \
     --master yarn  \
